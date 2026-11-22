@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sample-channel-1",
+    "name": "Sample Channel One",
+    "aliases": ["Sample 1", "Sample TV 1"],
+    "tvg_id": "Sample1.tv",
+    "country": "US",
+    "category": "General",
+    "file": "logos/sample-channel-1.png",
+    "external_url": null
+  },
+  {
+    "id": "sample-channel-2",
+    "name": "Sample News Network",
+    "aliases": ["Sample News", "News 24/7"],
+    "tvg_id": "SampleNews.tv",
+    "country": "US",
+    "category": "News",
+    "file": null,
+    "external_url": "https://example.com/logos/sample-news.png"
+  }
+]
