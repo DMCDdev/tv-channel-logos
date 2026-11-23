@@ -4,7 +4,10 @@
     "name": "A2Z",
     "aliases": [
       "A2Z",
-      "A2Z Channel 11"
+      "A2Z Channel 11",
+      "Zoe TV",
+      "A2Z HD",
+      "a2z"
     ],
     "tvg_id": "A2Z.ph",
     "country": "PH",
@@ -77,10 +80,11 @@
     "name": "Aliw 23 Channel",
     "aliases": [
       "Aliw 23 Channel",
-      "aliw 23 channel",
-      "Aliw Channel"
+      "Aliw 23",
+      "Aliw Channel 23",
+      "aliw 23 channel"
     ],
-    "tvg_id": "aliw23channel.ph",
+    "tvg_id": "Aliw23.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/aliw 23 channel.png",
@@ -91,9 +95,11 @@
     "name": "ANC",
     "aliases": [
       "ANC",
+      "ABS-CBN News Channel",
+      "ANC HD",
       "anc"
     ],
-    "tvg_id": "anc.ph",
+    "tvg_id": "ANC.ph",
     "country": "PH",
     "category": "News",
     "file": "logos/anc.png",
@@ -150,9 +156,10 @@
     "name": "Cinema One",
     "aliases": [
       "Cinema One",
+      "Cinema One HD",
       "cinema one"
     ],
-    "tvg_id": "cinemaone.ph",
+    "tvg_id": "CinemaOne.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/cinema one.png",
@@ -160,12 +167,15 @@
   },
   {
     "id": "cinemo",
-    "name": "Cinemo",
+    "name": "Cine Mo!",
     "aliases": [
-      "Cinemo",
-      "cinemo"
+      "Cine Mo!",
+      "Cine Mo",
+      "CineMo",
+      "cinemo",
+      "Cine Mo HD"
     ],
-    "tvg_id": "cinemo.ph",
+    "tvg_id": "CineMo.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/cinemo.png",
@@ -176,9 +186,10 @@
     "name": "CLTV 36",
     "aliases": [
       "CLTV 36",
+      "Central Luzon TV 36",
       "cltv 36"
     ],
-    "tvg_id": "cltv36.ph",
+    "tvg_id": "CLTV36.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/cltv 36.png",
@@ -218,12 +229,15 @@
   },
   {
     "id": "dzmm-teleradyo",
-    "name": "DZMM Teleradyo",
+    "name": "DZMM TeleRadyo",
     "aliases": [
+      "DZMM TeleRadyo",
       "DZMM Teleradyo",
+      "TeleRadyo",
+      "Teleradyo Serbisyo",
       "dzmm teleradyo"
     ],
-    "tvg_id": "dzmmteleradyo.ph",
+    "tvg_id": "DZMMTeleRadyo.ph",
     "country": "PH",
     "category": "News",
     "file": "logos/dzmm teleradyo.png",
@@ -233,10 +247,12 @@
     "id": "dzrh-tv",
     "name": "DZRH TV",
     "aliases": [
+      "DZRH News Television",
       "DZRH TV",
+      "DZRH",
       "dzrh tv"
     ],
-    "tvg_id": "dzrhtv.ph",
+    "tvg_id": "DZRHTV.ph",
     "country": "PH",
     "category": "News",
     "file": "logos/dzrh tv.png",
@@ -273,9 +289,12 @@
     "name": "GMA",
     "aliases": [
       "GMA",
+      "GMA Network",
+      "GMA 7",
+      "GMA HD",
       "gma"
     ],
-    "tvg_id": "gma.ph",
+    "tvg_id": "GMANetwork.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/gma.png",
@@ -286,9 +305,12 @@
     "name": "GTV",
     "aliases": [
       "GTV",
+      "GTV 27",
+      "Good TV",
+      "GMA News TV",
       "gtv"
     ],
-    "tvg_id": "gtv.ph",
+    "tvg_id": "GTV.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/gtv.png",
@@ -314,9 +336,11 @@
     "name": "IBC 13",
     "aliases": [
       "IBC 13",
+      "IBC",
+      "Intercontinental Broadcasting Corporation",
       "ibc 13"
     ],
-    "tvg_id": "ibc13.ph",
+    "tvg_id": "IBC13.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/ibc 13.png",
@@ -327,9 +351,10 @@
     "name": "INC Radio",
     "aliases": [
       "INC Radio",
+      "INCRadio",
       "inc radio"
     ],
-    "tvg_id": "incradio.ph",
+    "tvg_id": "INCRadio.ph",
     "country": "PH",
     "category": "Religious",
     "file": "logos/inc radio.png",
@@ -340,9 +365,10 @@
     "name": "INC TV",
     "aliases": [
       "INC TV",
+      "INCTV",
       "inc tv"
     ],
-    "tvg_id": "inctv.ph",
+    "tvg_id": "INCTV.ph",
     "country": "PH",
     "category": "Religious",
     "file": "logos/inc tv.png",
@@ -353,9 +379,10 @@
     "name": "Metro Channel",
     "aliases": [
       "Metro Channel",
+      "Metro Channel HD",
       "metro channel"
     ],
-    "tvg_id": "metrochannel.ph",
+    "tvg_id": "MetroChannel.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/metro channel.png",
@@ -365,10 +392,11 @@
     "id": "moviesphere",
     "name": "Moviesphere",
     "aliases": [
-      "Moviesphere",
+      "MovieSphere",
+      "MovieSphere PH",
       "moviesphere"
     ],
-    "tvg_id": "moviesphere.ph",
+    "tvg_id": "MovieSphere.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/moviesphere.png",
@@ -379,9 +407,11 @@
     "name": "MYX",
     "aliases": [
       "MYX",
+      "MYX Philippines",
+      "MYX PH",
       "myx"
     ],
-    "tvg_id": "myx.ph",
+    "tvg_id": "MYX.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/myx.png",
@@ -389,12 +419,15 @@
   },
   {
     "id": "net25",
-    "name": "Net25",
+    "name": "NET 25",
     "aliases": [
+      "NET 25",
+      "Net 25",
+      "NET25",
       "Net25",
       "net25"
     ],
-    "tvg_id": "net25.ph",
+    "tvg_id": "NET25.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/net25.png",
@@ -404,10 +437,12 @@
     "id": "one-news-ph",
     "name": "One News PH",
     "aliases": [
+      "One News",
       "One News PH",
+      "One News HD",
       "one news ph"
     ],
-    "tvg_id": "onenewsph.ph",
+    "tvg_id": "OneNews.ph",
     "country": "PH",
     "category": "News",
     "file": "logos/one news ph.png",
@@ -418,9 +453,10 @@
     "name": "One PH",
     "aliases": [
       "One PH",
+      "One PH HD",
       "one ph"
     ],
-    "tvg_id": "oneph.ph",
+    "tvg_id": "OnePH.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/one ph.png",
@@ -431,9 +467,12 @@
     "name": "One Sports",
     "aliases": [
       "One Sports",
+      "One Sports+",
+      "One Sports Plus",
+      "One Sports HD",
       "one sports"
     ],
-    "tvg_id": "onesports.ph",
+    "tvg_id": "OneSports.ph",
     "country": "PH",
     "category": "Sports",
     "file": "logos/one sports.png",
@@ -444,9 +483,10 @@
     "name": "PBA Rush",
     "aliases": [
       "PBA Rush",
+      "PBA Rush HD",
       "pba rush"
     ],
-    "tvg_id": "pbarush.ph",
+    "tvg_id": "PBARush.ph",
     "country": "PH",
     "category": "Sports",
     "file": "logos/pba rush.png",
@@ -457,9 +497,10 @@
     "name": "PBO",
     "aliases": [
       "PBO",
+      "Pinoy Box Office",
       "pbo"
     ],
-    "tvg_id": "pbo.ph",
+    "tvg_id": "PBO.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/pbo.png",
@@ -470,9 +511,11 @@
     "name": "PTV 4",
     "aliases": [
       "PTV 4",
+      "PTV",
+      "People's Television Network",
       "ptv 4"
     ],
-    "tvg_id": "ptv4.ph",
+    "tvg_id": "PTV.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/ptv 4.png",
@@ -483,9 +526,10 @@
     "name": "RPTV",
     "aliases": [
       "RPTV",
+      "RP TV",
       "rptv"
     ],
-    "tvg_id": "rptv.ph",
+    "tvg_id": "RPTV.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/rptv.png",
@@ -496,9 +540,11 @@
     "name": "SMNI",
     "aliases": [
       "SMNI",
+      "SMNI News Channel",
+      "Sonshine Media",
       "smni"
     ],
-    "tvg_id": "smni.ph",
+    "tvg_id": "SMNI.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/smni.png",
@@ -506,12 +552,14 @@
   },
   {
     "id": "tap-actionflix",
-    "name": "Tap Actionflix",
+    "name": "TAP Actionflix",
     "aliases": [
+      "TAP Actionflix",
       "Tap Actionflix",
+      "TAP Action Flix",
       "tap actionflix"
     ],
-    "tvg_id": "tapactionflix.ph",
+    "tvg_id": "TAPActionflix.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/tap actionflix.png",
@@ -519,12 +567,13 @@
   },
   {
     "id": "tap-movies",
-    "name": "Tap Movies",
+    "name": "TAP Movies",
     "aliases": [
+      "TAP Movies",
       "Tap Movies",
       "tap movies"
     ],
-    "tvg_id": "tapmovies.ph",
+    "tvg_id": "TAPMovies.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/tap movies.png",
@@ -532,12 +581,13 @@
   },
   {
     "id": "tap-sports",
-    "name": "Tap Sports",
+    "name": "TAP Sports",
     "aliases": [
+      "TAP Sports",
       "Tap Sports",
       "tap sports"
     ],
-    "tvg_id": "tapsports.ph",
+    "tvg_id": "TAPSports.ph",
     "country": "PH",
     "category": "Sports",
     "file": "logos/tap sports.png",
@@ -545,12 +595,13 @@
   },
   {
     "id": "tap-tv",
-    "name": "Tap TV",
+    "name": "TAP TV",
     "aliases": [
+      "TAP TV",
       "Tap TV",
       "tap tv"
     ],
-    "tvg_id": "taptv.ph",
+    "tvg_id": "TAPTV.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/tap tv.png",
@@ -573,12 +624,17 @@
   },
   {
     "id": "tv5",
-    "name": "Tv5",
+    "name": "TV5",
     "aliases": [
+      "TV5",
       "Tv5",
-      "tv5"
+      "tv5",
+      "TV 5",
+      "TV5 HD",
+      "The 5 Network",
+      "Kapatid Channel"
     ],
-    "tvg_id": "tv5.ph",
+    "tvg_id": "TV5.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/tv5.png",
@@ -589,9 +645,11 @@
     "name": "UNTV",
     "aliases": [
       "UNTV",
+      "UNTV News and Rescue",
+      "UNTV 37",
       "untv"
     ],
-    "tvg_id": "untv.ph",
+    "tvg_id": "UNTV.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/untv.png",
@@ -599,12 +657,14 @@
   },
   {
     "id": "vivacinema",
-    "name": "Vivacinema",
+    "name": "Viva Cinema",
     "aliases": [
+      "Viva Cinema",
       "Vivacinema",
+      "Viva TV Cinema",
       "vivacinema"
     ],
-    "tvg_id": "vivacinema.ph",
+    "tvg_id": "VivaCinema.ph",
     "country": "PH",
     "category": "Movies",
     "file": "logos/vivacinema.png",
@@ -612,12 +672,14 @@
   },
   {
     "id": "tap-edge",
-    "name": "Tap Edge",
+    "name": "TAP Edge",
     "aliases": [
+      "TAP Edge",
       "Tap Edge",
-      "tap edge"
+      "tap edge",
+      "TAP Edge HD"
     ],
-    "tvg_id": "tapedge.ph",
+    "tvg_id": "TAPEdge.ph",
     "country": "PH",
     "category": "Entertainment",
     "file": "logos/tap edge.png",
@@ -625,14 +687,16 @@
   },
   {
     "id": "tmc",
-    "name": "Tmc",
+    "name": "TMC",
     "aliases": [
-      "Tmc",
+      "TMC",
+      "Tagalized Movie Channel",
+      "TMC HD",
       "tmc"
     ],
-    "tvg_id": "tmc.ph",
+    "tvg_id": "TMC.ph",
     "country": "PH",
-    "category": "Entertainment",
+    "category": "Movies",
     "file": "logos/tmc.png",
     "external_url": null
   }

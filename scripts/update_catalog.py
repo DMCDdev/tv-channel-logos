@@ -60,7 +60,7 @@ def format_title_name(raw_name: str) -> str:
     """Format file basename to clean channel title."""
     cleaned = raw_name.replace("-", " ").replace("_", " ").strip()
     words = cleaned.split()
-    caps = ["tv", "hd", "sd", "ph", "us", "uk", "cnn", "gma", "gtv", "ibc", "ptv", "rptv", "a2z", "anc", "axn", "pbo", "pba", "sm", "smni", "untv", "ewtn", "tlc", "cltv", "dzmm", "dzrh", "inc", "myx"]
+    caps = ["tv", "hd", "sd", "ph", "us", "uk", "cnn", "gma", "gtv", "ibc", "ptv", "rptv", "a2z", "anc", "axn", "pbo", "pba", "sm", "smni", "untv", "ewtn", "tlc", "cltv", "dzmm", "dzrh", "inc", "myx", "tmc", "tap", "net"]
     result = []
     for w in words:
         if w.lower() in caps:
