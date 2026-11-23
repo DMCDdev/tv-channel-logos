@@ -10,6 +10,7 @@ import re
 import ssl
 import sys
 import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -55,6 +56,19 @@ def sanitize_filename(name: str) -> str:
     s = re.sub(r"-+", "-", s).strip("-")
     return s or "logo"
 
+def format_title_name(raw_name: str) -> str:
+    """Format file basename to clean channel title."""
+    cleaned = raw_name.replace("-", " ").replace("_", " ").strip()
+    words = cleaned.split()
+    caps = ["tv", "hd", "sd", "ph", "us", "uk", "cnn", "gma", "gtv", "ibc", "ptv", "rptv", "a2z", "anc", "axn", "pbo", "pba", "sm", "smni", "untv", "ewtn", "tlc", "cltv", "dzmm", "dzrh", "inc", "myx"]
+    result = []
+    for w in words:
+        if w.lower() in caps:
+            result.append(w.upper())
+        else:
+            result.append(w.capitalize())
+    return " ".join(result)
+
 def load_channels():
     if not CHANNELS_FILE.exists():
         return []
@@ -66,20 +80,86 @@ def save_channels(channels):
         json.dump(channels, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
+def auto_discover_logos(existing_channels):
+    """Auto-discover logo files in logos/ that aren't yet in channels.json."""
+    if not LOGOS_DIR.exists():
+        return existing_channels, False
+
+    known_files = set()
+    for c in existing_channels:
+        f = c.get("file")
+        if f:
+            known_files.add(f.lower())
+            known_files.add(f.replace("-", " ").lower())
+            known_files.add(f.replace(" ", "-").lower())
+            known_files.add(Path(f).name.lower())
+
+    added = False
+    valid_exts = {".png", ".jpg", ".jpeg", ".svg", ".webp"}
+
+    for p in sorted(LOGOS_DIR.iterdir()):
+        if p.is_file() and p.suffix.lower() in valid_exts and p.name != ".gitkeep":
+            rel_file = f"logos/{p.name}"
+            if p.name.lower() not in known_files and rel_file.lower() not in known_files:
+                base_stem = p.stem
+                cid = sanitize_filename(base_stem)
+                title = format_title_name(base_stem)
+                
+                # Assign country based on common patterns
+                country = "PH"
+                if any(x in base_stem.lower() for x in ["cnn", "discovery", "fox", "al-jazeera", "animax", "axn", "cartoon network", "history", "tlc"]):
+                    if "ph" not in base_stem.lower():
+                        country = "US" if "al-jazeera" not in base_stem.lower() else "QA"
+
+                # Assign category
+                cat = "Entertainment"
+                if any(x in base_stem.lower() for x in ["news", "cnn", "al-jazeera", "dzmm", "dzrh", "one news", "anc"]):
+                    cat = "News"
+                elif any(x in base_stem.lower() for x in ["sports", "pba"]):
+                    cat = "Sports"
+                elif any(x in base_stem.lower() for x in ["movie", "cinema", "cinemo", "pbo", "actionflix"]):
+                    cat = "Movies"
+                elif any(x in base_stem.lower() for x in ["discovery", "history", "tlc"]):
+                    cat = "Documentary"
+                elif any(x in base_stem.lower() for x in ["cartoon", "animax"]):
+                    cat = "Animation"
+                elif any(x in base_stem.lower() for x in ["ewtn", "inc"]):
+                    cat = "Religious"
+
+                new_entry = {
+                    "id": cid,
+                    "name": title,
+                    "aliases": [title, base_stem],
+                    "tvg_id": f"{cid.replace('-', '')}.{country.lower()}",
+                    "country": country,
+                    "category": cat,
+                    "file": rel_file,
+                    "external_url": None
+                }
+                existing_channels.append(new_entry)
+                known_files.add(p.name.lower())
+                added = True
+                print(f"Auto-discovered new logo: '{p.name}' -> Added as '{title}'")
+
+    return existing_channels, added
+
 def main():
     download_missing = "--download" in sys.argv
     print(f"Loading {CHANNELS_FILE}...")
     channels = load_channels()
-    print(f"Found {len(channels)} channel definitions.")
+    print(f"Found {len(channels)} existing channel definitions.")
 
     LOGOS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Auto-discover any unmapped logos in logos/ folder
+    channels, auto_added = auto_discover_logos(channels)
 
     lookup_map = {}
     table_rows = []
 
     stored_count = 0
     external_count = 0
-    updated_channels = False
+    updated_channels = auto_added
 
     for item in sorted(channels, key=lambda x: (x.get("country", ""), x.get("name", "").lower())):
         cid = item.get("id", "").strip()
@@ -91,11 +171,28 @@ def main():
         file_rel = item.get("file", "").strip() if item.get("file") else None
         ext_url = item.get("external_url", "").strip() if item.get("external_url") else None
 
-        # Check local file
+        # Check local file with fallback to spaces / hyphens / URL unquote
         local_exists = False
+        resolved_file = None
         if file_rel:
-            local_path = ROOT_DIR / file_rel
-            local_exists = local_path.is_file()
+            candidates = [
+                file_rel,
+                urllib.parse.unquote(file_rel),
+                file_rel.replace("-", " "),
+                file_rel.replace(" ", "-"),
+                Path(file_rel).name,
+                Path(file_rel).name.replace("-", " "),
+                Path(file_rel).name.replace(" ", "-"),
+            ]
+            for cand in candidates:
+                cand_path = ROOT_DIR / cand if cand.startswith("logos") else LOGOS_DIR / cand
+                if cand_path.is_file():
+                    resolved_file = f"logos/{cand_path.name}"
+                    local_exists = True
+                    if file_rel != resolved_file:
+                        item["file"] = resolved_file
+                        updated_channels = True
+                    break
 
         # If --download is passed and local file is missing, try to download external_url
         if download_missing and not local_exists and ext_url:
@@ -108,17 +205,19 @@ def main():
             target_path = LOGOS_DIR / target_name
             print(f"Downloading logo for '{name}' -> {target_name}...")
             if download_file(ext_url, target_path):
-                file_rel = f"logos/{target_name}"
-                item["file"] = file_rel
+                resolved_file = f"logos/{target_name}"
+                item["file"] = resolved_file
                 local_exists = True
                 updated_channels = True
 
         # Determine primary resolved URL
         primary_url = ""
         storage_type = "None"
-        if local_exists and file_rel:
-            primary_url = f"{CDN_BASE}{file_rel}"
-            raw_url = f"{RAW_BASE}{file_rel}"
+        if local_exists and resolved_file:
+            # Encode spaces and special chars for valid Web URL
+            encoded_path = urllib.parse.quote(resolved_file)
+            primary_url = f"{CDN_BASE}{encoded_path}"
+            raw_url = f"{RAW_BASE}{encoded_path}"
             storage_type = "Stored (Repo)"
             stored_count += 1
         elif ext_url:
@@ -133,33 +232,25 @@ def main():
 
         # Populate quick lookup map
         if primary_url:
-            # Map by ID
-            if cid:
-                lookup_map[cid] = primary_url
-                lookup_map[cid.lower()] = primary_url
-                lookup_map[cid.upper()] = primary_url
-            # Map by name and common variants
-            if name:
-                lookup_map[name] = primary_url
-                lookup_map[name.lower()] = primary_url
-                lookup_map[name.upper()] = primary_url
-                lookup_map[name.replace(" ", "")] = primary_url
-                lookup_map[name.replace(" ", "-")] = primary_url
-                lookup_map[name.replace(" ", "_")] = primary_url
-            # Map by tvg_id
-            if tvg_id:
-                lookup_map[tvg_id] = primary_url
-                lookup_map[tvg_id.lower()] = primary_url
-            # Map by aliases
-            for alias in aliases:
-                a_str = str(alias).strip()
-                if a_str:
-                    lookup_map[a_str] = primary_url
-                    lookup_map[a_str.lower()] = primary_url
-                    lookup_map[a_str.replace(" ", "")] = primary_url
+            keys_to_map = [cid, name, tvg_id] + list(aliases)
+            if resolved_file:
+                file_stem = Path(resolved_file).stem
+                keys_to_map.extend([file_stem, file_stem.replace("-", " "), file_stem.replace(" ", "-")])
+
+            for k in set(keys_to_map):
+                if not k:
+                    continue
+                k_str = str(k).strip()
+                if not k_str:
+                    continue
+                lookup_map[k_str] = primary_url
+                lookup_map[k_str.lower()] = primary_url
+                lookup_map[k_str.upper()] = primary_url
+                lookup_map[k_str.replace(" ", "")] = primary_url
+                lookup_map[k_str.replace(" ", "-")] = primary_url
+                lookup_map[k_str.replace(" ", "_")] = primary_url
 
         # Build table row
-        # Preview image
         preview_img = f'<img src="{primary_url}" alt="{name}" height="32" style="max-height:32px; vertical-align:middle;"/>' if primary_url else "—"
         tvg_display = f"<code>{tvg_id}</code>" if tvg_id else "—"
         type_badge = f"`{storage_type}`"
@@ -170,7 +261,7 @@ def main():
         )
 
     if updated_channels:
-        print("Updating channels.json with downloaded local files...")
+        print("Updating channels.json with resolved paths and auto-discovered logos...")
         save_channels(channels)
 
     # Save logos.json
@@ -195,7 +286,7 @@ A unified repository for TV channel logos designed for **[DreamTuner TV](https:/
 This repository allows you to either:
 1. **Store logo files** directly in the `logos/` directory (served via GitHub Raw and fast jsDelivr CDN).
 2. **Attach external links** (e.g. Wikimedia, Imgur, or official network links) in `channels.json` without storing local files.
-3. Automatically download any attached link into local storage whenever desired.
+3. Automatically discover and map any images placed in `logos/`.
 
 ---
 
@@ -228,17 +319,10 @@ DreamTuner TV will automatically match channel names, callsigns, and sanitized a
 
 ## How to Add Logos
 
-### Option A: Use the CLI Helper (Fastest)
-
-Run the included helper script:
-
-```bash
-# Add a channel and attach an external link
-py scripts/add_logo.py --name "GMA 7" --tvg-id "GMA.ph" --country "PH" --category "Entertainment" --url "https://i.imgur.com/example.png"
-
-# Add a channel, download the logo, and store it locally in logos/
-py scripts/add_logo.py --name "TV5" --tvg-id "TV5.ph" --country "PH" --url "https://i.imgur.com/example.png" --download
-```
+### Option A: Drag & Drop directly on GitHub (Easiest)
+1. Go to the `logos/` folder on GitHub and click **Add file** > **Upload files**.
+2. Drag and drop your logo `.png` or `.svg`.
+3. The automated GitHub Action will automatically register it and update this README gallery!
 
 ### Option B: Add Manually to `channels.json`
 
@@ -246,21 +330,19 @@ Add an entry to `channels.json`:
 
 ```json
 {{
-  "id": "alltv",
-  "name": "ALLTV",
-  "aliases": ["ALL TV", "AllTV.ph", "All TV HD"],
-  "tvg_id": "AllTV.ph",
+  "id": "alltv-2",
+  "name": "ALLTV2",
+  "aliases": ["ABS-CBN sa ALLTV2", "ALLTV2"],
+  "tvg_id": "ALLTV2.ph",
   "country": "PH",
   "category": "Entertainment",
-  "file": "logos/alltv.png",
-  "external_url": "https://i.imgur.com/vuzKeNN.png"
+  "file": "logos/abs-cbn sa alltv2.png",
+  "external_url": null
 }}
 ```
 
 - If you want to **store the file locally**: place the image into `logos/` and set `"file": "logos/<filename>.png"`.
 - If you only want to **attach an external link**: set `"file": null` and provide `"external_url"`.
-- Run `py scripts/update_catalog.py` to regenerate `logos.json` and update this README table.
-- Run `py scripts/update_catalog.py --download` if you want to automatically download all attached external links to local files.
 
 ---
 
@@ -275,7 +357,7 @@ Add an entry to `channels.json`:
 ## Automation
 
 This repository includes a GitHub Actions workflow (`.github/workflows/update-catalog.yml`). Whenever you commit changes to `channels.json` or add files to `logos/`, the workflow automatically:
-1. Validates all channels.
+1. Auto-discovers and validates all channels.
 2. Generates updated `logos.json`.
 3. Rebuilds the visual Markdown table in `README.md`.
 4. Commits and pushes the updates back to `main`.

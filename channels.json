@@ -2,7 +2,10 @@
   {
     "id": "a2z",
     "name": "A2Z",
-    "aliases": ["A2Z", "A2Z Channel 11"],
+    "aliases": [
+      "A2Z",
+      "A2Z Channel 11"
+    ],
     "tvg_id": "A2Z.ph",
     "country": "PH",
     "category": "Entertainment",
@@ -12,21 +15,577 @@
   {
     "id": "kapamilya-channel-hd",
     "name": "Kapamilya Channel HD",
-    "aliases": ["ABS-CBN Kapamilya Channel HD", "Kapamilya Channel HD", "Kapamilya HD"],
+    "aliases": [
+      "ABS-CBN Kapamilya Channel HD",
+      "Kapamilya Channel HD",
+      "Kapamilya HD"
+    ],
     "tvg_id": "KapamilyaChannelHD.ph",
     "country": "PH",
     "category": "Entertainment",
-    "file": "logos/abs-cbn-kapamilya-channel-hd.png",
+    "file": "logos/abs-cbn kapamilya channel hd.png",
     "external_url": null
   },
   {
     "id": "alltv-2",
     "name": "ALLTV2",
-    "aliases": ["ABS-CBN sa ALLTV2", "ALLTV2", "ALLTV 2"],
+    "aliases": [
+      "ABS-CBN sa ALLTV2",
+      "ALLTV2",
+      "ALLTV 2"
+    ],
     "tvg_id": "ALLTV2.ph",
     "country": "PH",
     "category": "Entertainment",
-    "file": "logos/abs-cbn-sa-alltv2.png",
+    "file": "logos/abs-cbn sa alltv2.png",
+    "external_url": null
+  },
+
+  {
+    "id": "abs-cbn-kapamilya-channel",
+    "name": "Abs Cbn Kapamilya Channel",
+    "aliases": [
+      "Abs Cbn Kapamilya Channel",
+      "abs-cbn kapamilya channel"
+    ],
+    "tvg_id": "abscbnkapamilyachannel.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/abs-cbn kapamilya channel.png",
+    "external_url": null
+  },
+
+  {
+    "id": "al-jazeera",
+    "name": "Al Jazeera",
+    "aliases": [
+      "Al Jazeera",
+      "al-jazeera"
+    ],
+    "tvg_id": "aljazeera.qa",
+    "country": "QA",
+    "category": "News",
+    "file": "logos/al-jazeera.png",
+    "external_url": null
+  },
+  {
+    "id": "aliw-23-channel",
+    "name": "Aliw 23 Channel",
+    "aliases": [
+      "Aliw 23 Channel",
+      "aliw 23 channel"
+    ],
+    "tvg_id": "aliw23channel.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/aliw 23 channel.png",
+    "external_url": null
+  },
+  {
+    "id": "anc",
+    "name": "ANC",
+    "aliases": [
+      "ANC",
+      "anc"
+    ],
+    "tvg_id": "anc.ph",
+    "country": "PH",
+    "category": "News",
+    "file": "logos/anc.png",
+    "external_url": null
+  },
+  {
+    "id": "animax",
+    "name": "Animax",
+    "aliases": [
+      "Animax",
+      "animax"
+    ],
+    "tvg_id": "animax.us",
+    "country": "US",
+    "category": "Animation",
+    "file": "logos/animax.png",
+    "external_url": null
+  },
+  {
+    "id": "axn",
+    "name": "AXN",
+    "aliases": [
+      "AXN",
+      "axn"
+    ],
+    "tvg_id": "axn.us",
+    "country": "US",
+    "category": "Entertainment",
+    "file": "logos/axn.png",
+    "external_url": null
+  },
+  {
+    "id": "cartoon-network",
+    "name": "Cartoon Network",
+    "aliases": [
+      "Cartoon Network",
+      "cartoon network"
+    ],
+    "tvg_id": "cartoonnetwork.us",
+    "country": "US",
+    "category": "Animation",
+    "file": "logos/cartoon network.png",
+    "external_url": null
+  },
+  {
+    "id": "cinema-one",
+    "name": "Cinema One",
+    "aliases": [
+      "Cinema One",
+      "cinema one"
+    ],
+    "tvg_id": "cinemaone.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/cinema one.png",
+    "external_url": null
+  },
+  {
+    "id": "cinemo",
+    "name": "Cinemo",
+    "aliases": [
+      "Cinemo",
+      "cinemo"
+    ],
+    "tvg_id": "cinemo.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/cinemo.png",
+    "external_url": null
+  },
+  {
+    "id": "cltv-36",
+    "name": "CLTV 36",
+    "aliases": [
+      "CLTV 36",
+      "cltv 36"
+    ],
+    "tvg_id": "cltv36.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/cltv 36.png",
+    "external_url": null
+  },
+  {
+    "id": "cnn",
+    "name": "CNN",
+    "aliases": [
+      "CNN",
+      "cnn"
+    ],
+    "tvg_id": "cnn.us",
+    "country": "US",
+    "category": "News",
+    "file": "logos/cnn.png",
+    "external_url": null
+  },
+  {
+    "id": "discovery-channel",
+    "name": "Discovery Channel",
+    "aliases": [
+      "Discovery Channel",
+      "discovery channel"
+    ],
+    "tvg_id": "discoverychannel.us",
+    "country": "US",
+    "category": "Documentary",
+    "file": "logos/discovery channel.png",
+    "external_url": null
+  },
+  {
+    "id": "dzmm-teleradyo",
+    "name": "DZMM Teleradyo",
+    "aliases": [
+      "DZMM Teleradyo",
+      "dzmm teleradyo"
+    ],
+    "tvg_id": "dzmmteleradyo.ph",
+    "country": "PH",
+    "category": "News",
+    "file": "logos/dzmm teleradyo.png",
+    "external_url": null
+  },
+  {
+    "id": "dzrh-tv",
+    "name": "DZRH TV",
+    "aliases": [
+      "DZRH TV",
+      "dzrh tv"
+    ],
+    "tvg_id": "dzrhtv.ph",
+    "country": "PH",
+    "category": "News",
+    "file": "logos/dzrh tv.png",
+    "external_url": null
+  },
+  {
+    "id": "ewtn",
+    "name": "EWTN",
+    "aliases": [
+      "EWTN",
+      "ewtn"
+    ],
+    "tvg_id": "ewtn.ph",
+    "country": "PH",
+    "category": "Religious",
+    "file": "logos/ewtn.png",
+    "external_url": null
+  },
+  {
+    "id": "fox-news-channel",
+    "name": "Fox News Channel",
+    "aliases": [
+      "Fox News Channel",
+      "fox news channel"
+    ],
+    "tvg_id": "foxnewschannel.us",
+    "country": "US",
+    "category": "News",
+    "file": "logos/fox news channel.png",
+    "external_url": null
+  },
+  {
+    "id": "gma",
+    "name": "GMA",
+    "aliases": [
+      "GMA",
+      "gma"
+    ],
+    "tvg_id": "gma.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/gma.png",
+    "external_url": null
+  },
+  {
+    "id": "gtv",
+    "name": "GTV",
+    "aliases": [
+      "GTV",
+      "gtv"
+    ],
+    "tvg_id": "gtv.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/gtv.png",
+    "external_url": null
+  },
+  {
+    "id": "history",
+    "name": "History",
+    "aliases": [
+      "History",
+      "history"
+    ],
+    "tvg_id": "history.us",
+    "country": "US",
+    "category": "Documentary",
+    "file": "logos/history.png",
+    "external_url": null
+  },
+  {
+    "id": "ibc-13",
+    "name": "IBC 13",
+    "aliases": [
+      "IBC 13",
+      "ibc 13"
+    ],
+    "tvg_id": "ibc13.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/ibc 13.png",
+    "external_url": null
+  },
+  {
+    "id": "inc-radio",
+    "name": "INC Radio",
+    "aliases": [
+      "INC Radio",
+      "inc radio"
+    ],
+    "tvg_id": "incradio.ph",
+    "country": "PH",
+    "category": "Religious",
+    "file": "logos/inc radio.png",
+    "external_url": null
+  },
+  {
+    "id": "inc-tv",
+    "name": "INC TV",
+    "aliases": [
+      "INC TV",
+      "inc tv"
+    ],
+    "tvg_id": "inctv.ph",
+    "country": "PH",
+    "category": "Religious",
+    "file": "logos/inc tv.png",
+    "external_url": null
+  },
+  {
+    "id": "metro-channel",
+    "name": "Metro Channel",
+    "aliases": [
+      "Metro Channel",
+      "metro channel"
+    ],
+    "tvg_id": "metrochannel.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/metro channel.png",
+    "external_url": null
+  },
+  {
+    "id": "moviesphere",
+    "name": "Moviesphere",
+    "aliases": [
+      "Moviesphere",
+      "moviesphere"
+    ],
+    "tvg_id": "moviesphere.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/moviesphere.png",
+    "external_url": null
+  },
+  {
+    "id": "myx",
+    "name": "MYX",
+    "aliases": [
+      "MYX",
+      "myx"
+    ],
+    "tvg_id": "myx.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/myx.png",
+    "external_url": null
+  },
+  {
+    "id": "net25",
+    "name": "Net25",
+    "aliases": [
+      "Net25",
+      "net25"
+    ],
+    "tvg_id": "net25.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/net25.png",
+    "external_url": null
+  },
+  {
+    "id": "one-news-ph",
+    "name": "One News PH",
+    "aliases": [
+      "One News PH",
+      "one news ph"
+    ],
+    "tvg_id": "onenewsph.ph",
+    "country": "PH",
+    "category": "News",
+    "file": "logos/one news ph.png",
+    "external_url": null
+  },
+  {
+    "id": "one-ph",
+    "name": "One PH",
+    "aliases": [
+      "One PH",
+      "one ph"
+    ],
+    "tvg_id": "oneph.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/one ph.png",
+    "external_url": null
+  },
+  {
+    "id": "one-sports",
+    "name": "One Sports",
+    "aliases": [
+      "One Sports",
+      "one sports"
+    ],
+    "tvg_id": "onesports.ph",
+    "country": "PH",
+    "category": "Sports",
+    "file": "logos/one sports.png",
+    "external_url": null
+  },
+  {
+    "id": "pba-rush",
+    "name": "PBA Rush",
+    "aliases": [
+      "PBA Rush",
+      "pba rush"
+    ],
+    "tvg_id": "pbarush.ph",
+    "country": "PH",
+    "category": "Sports",
+    "file": "logos/pba rush.png",
+    "external_url": null
+  },
+  {
+    "id": "pbo",
+    "name": "PBO",
+    "aliases": [
+      "PBO",
+      "pbo"
+    ],
+    "tvg_id": "pbo.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/pbo.png",
+    "external_url": null
+  },
+  {
+    "id": "ptv-4",
+    "name": "PTV 4",
+    "aliases": [
+      "PTV 4",
+      "ptv 4"
+    ],
+    "tvg_id": "ptv4.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/ptv 4.png",
+    "external_url": null
+  },
+  {
+    "id": "rptv",
+    "name": "RPTV",
+    "aliases": [
+      "RPTV",
+      "rptv"
+    ],
+    "tvg_id": "rptv.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/rptv.png",
+    "external_url": null
+  },
+  {
+    "id": "smni",
+    "name": "SMNI",
+    "aliases": [
+      "SMNI",
+      "smni"
+    ],
+    "tvg_id": "smni.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/smni.png",
+    "external_url": null
+  },
+  {
+    "id": "tap-actionflix",
+    "name": "Tap Actionflix",
+    "aliases": [
+      "Tap Actionflix",
+      "tap actionflix"
+    ],
+    "tvg_id": "tapactionflix.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/tap actionflix.png",
+    "external_url": null
+  },
+  {
+    "id": "tap-movies",
+    "name": "Tap Movies",
+    "aliases": [
+      "Tap Movies",
+      "tap movies"
+    ],
+    "tvg_id": "tapmovies.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/tap movies.png",
+    "external_url": null
+  },
+  {
+    "id": "tap-sports",
+    "name": "Tap Sports",
+    "aliases": [
+      "Tap Sports",
+      "tap sports"
+    ],
+    "tvg_id": "tapsports.ph",
+    "country": "PH",
+    "category": "Sports",
+    "file": "logos/tap sports.png",
+    "external_url": null
+  },
+  {
+    "id": "tap-tv",
+    "name": "Tap TV",
+    "aliases": [
+      "Tap TV",
+      "tap tv"
+    ],
+    "tvg_id": "taptv.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/tap tv.png",
+    "external_url": null
+  },
+  {
+    "id": "tlc",
+    "name": "TLC",
+    "aliases": [
+      "TLC",
+      "tlc"
+    ],
+    "tvg_id": "tlc.us",
+    "country": "US",
+    "category": "Documentary",
+    "file": "logos/tlc.png",
+    "external_url": null
+  },
+  {
+    "id": "tv5",
+    "name": "Tv5",
+    "aliases": [
+      "Tv5",
+      "tv5"
+    ],
+    "tvg_id": "tv5.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/tv5.png",
+    "external_url": null
+  },
+  {
+    "id": "untv",
+    "name": "UNTV",
+    "aliases": [
+      "UNTV",
+      "untv"
+    ],
+    "tvg_id": "untv.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/untv.png",
+    "external_url": null
+  },
+  {
+    "id": "vivacinema",
+    "name": "Vivacinema",
+    "aliases": [
+      "Vivacinema",
+      "vivacinema"
+    ],
+    "tvg_id": "vivacinema.ph",
+    "country": "PH",
+    "category": "Movies",
+    "file": "logos/vivacinema.png",
     "external_url": null
   }
 ]
