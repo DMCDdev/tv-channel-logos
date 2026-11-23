@@ -2,21 +2,31 @@
   {
     "id": "a2z",
     "name": "A2Z",
-    "aliases": ["A2Z"],
+    "aliases": ["A2Z", "A2Z Channel 11"],
     "tvg_id": "A2Z.ph",
     "country": "PH",
     "category": "Entertainment",
-    "file": "https://github.com/DMCDdev/tv-channel-logos/blob/main/logos/a2z.png",
+    "file": "logos/a2z.png",
     "external_url": null
   },
   {
-    "id": "sample-channel-2",
-    "name": "Sample News Network",
-    "aliases": ["Sample News", "News 24/7"],
-    "tvg_id": "SampleNews.tv",
-    "country": "US",
-    "category": "News",
-    "file": null,
-    "external_url": "https://example.com/logos/sample-news.png"
+    "id": "kapamilya-channel-hd",
+    "name": "Kapamilya Channel HD",
+    "aliases": ["ABS-CBN Kapamilya Channel HD", "Kapamilya Channel HD", "Kapamilya HD"],
+    "tvg_id": "KapamilyaChannelHD.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/abs-cbn-kapamilya-channel-hd.png",
+    "external_url": null
+  },
+  {
+    "id": "alltv-2",
+    "name": "ALLTV2",
+    "aliases": ["ABS-CBN sa ALLTV2", "ALLTV2", "ALLTV 2"],
+    "tvg_id": "ALLTV2.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/abs-cbn-sa-alltv2.png",
+    "external_url": null
   }
 ]
