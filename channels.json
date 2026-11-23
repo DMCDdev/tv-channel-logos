@@ -32,7 +32,8 @@
     "aliases": [
       "ABS-CBN sa ALLTV2",
       "ALLTV2",
-      "ALLTV 2"
+      "ALLTV 2",
+      "ALLTV"
     ],
     "tvg_id": "ALLTV2.ph",
     "country": "PH",
@@ -76,7 +77,8 @@
     "name": "Aliw 23 Channel",
     "aliases": [
       "Aliw 23 Channel",
-      "aliw 23 channel"
+      "aliw 23 channel",
+      "Aliw Channel"
     ],
     "tvg_id": "aliw23channel.ph",
     "country": "PH",
