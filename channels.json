@@ -43,10 +43,11 @@
 
   {
     "id": "abs-cbn-kapamilya-channel",
-    "name": "Abs Cbn Kapamilya Channel",
+    "name": "Kapamilya Channel",
     "aliases": [
-      "Abs Cbn Kapamilya Channel",
-      "abs-cbn kapamilya channel"
+      "ABS CBN Kapamilya Channel",
+      "abs-cbn kapamilya channel",
+      "Kapamilya Channel"
     ],
     "tvg_id": "abscbnkapamilyachannel.ph",
     "country": "PH",
