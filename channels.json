@@ -58,11 +58,15 @@
     "id": "al-jazeera",
     "name": "Al Jazeera",
     "aliases": [
+      "AJE",
       "Al Jazeera",
+      "Al Jazeera English",
+      "Al Jazeera English HD",
+      "Al Jazeera HD",
       "al-jazeera"
     ],
-    "tvg_id": "aljazeera.qa",
-    "country": "QA",
+    "tvg_id": "AlJazeeraEnglish.net",
+    "country": "Global",
     "category": "News",
     "file": "logos/al-jazeera.png",
     "external_url": null
