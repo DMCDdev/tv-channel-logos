@@ -40,7 +40,6 @@
     "file": "logos/abs-cbn sa alltv2.png",
     "external_url": null
   },
-
   {
     "id": "abs-cbn-kapamilya-channel",
     "name": "Kapamilya Channel",
@@ -55,7 +54,6 @@
     "file": "logos/abs-cbn kapamilya channel.png",
     "external_url": null
   },
-
   {
     "id": "al-jazeera",
     "name": "Al Jazeera",
@@ -100,10 +98,12 @@
     "name": "Animax",
     "aliases": [
       "Animax",
+      "Animax Asia",
+      "Animax East Asia",
       "animax"
     ],
-    "tvg_id": "animax.us",
-    "country": "US",
+    "tvg_id": "Animax.asia",
+    "country": "Asia",
     "category": "Animation",
     "file": "logos/animax.png",
     "external_url": null
@@ -113,10 +113,12 @@
     "name": "AXN",
     "aliases": [
       "AXN",
+      "AXN Asia",
+      "AXN East Asia",
       "axn"
     ],
-    "tvg_id": "axn.us",
-    "country": "US",
+    "tvg_id": "AXN.asia",
+    "country": "Asia",
     "category": "Entertainment",
     "file": "logos/axn.png",
     "external_url": null
@@ -126,10 +128,13 @@
     "name": "Cartoon Network",
     "aliases": [
       "Cartoon Network",
+      "Cartoon Network Asia",
+      "Cartoon Network PH",
+      "Cartoon Network Philippines",
       "cartoon network"
     ],
-    "tvg_id": "cartoonnetwork.us",
-    "country": "US",
+    "tvg_id": "CartoonNetwork.asia",
+    "country": "Asia",
     "category": "Animation",
     "file": "logos/cartoon network.png",
     "external_url": null
@@ -178,10 +183,13 @@
     "name": "CNN",
     "aliases": [
       "CNN",
+      "CNN Asia",
+      "CNN International",
+      "CNN International Asia",
       "cnn"
     ],
-    "tvg_id": "cnn.us",
-    "country": "US",
+    "tvg_id": "CNN.asia",
+    "country": "Asia",
     "category": "News",
     "file": "logos/cnn.png",
     "external_url": null
@@ -190,11 +198,14 @@
     "id": "discovery-channel",
     "name": "Discovery Channel",
     "aliases": [
+      "Discovery Asia",
       "Discovery Channel",
+      "Discovery Channel Asia",
+      "Discovery Channel Southeast Asia",
       "discovery channel"
     ],
-    "tvg_id": "discoverychannel.us",
-    "country": "US",
+    "tvg_id": "DiscoveryChannel.asia",
+    "country": "Asia",
     "category": "Documentary",
     "file": "logos/discovery channel.png",
     "external_url": null
@@ -282,10 +293,12 @@
     "name": "History",
     "aliases": [
       "History",
+      "History Asia",
+      "History Channel Asia",
       "history"
     ],
-    "tvg_id": "history.us",
-    "country": "US",
+    "tvg_id": "History.asia",
+    "country": "Asia",
     "category": "Documentary",
     "file": "logos/history.png",
     "external_url": null
@@ -542,10 +555,12 @@
     "name": "TLC",
     "aliases": [
       "TLC",
+      "TLC Asia",
+      "TLC Southeast Asia",
       "tlc"
     ],
-    "tvg_id": "tlc.us",
-    "country": "US",
+    "tvg_id": "TLC.asia",
+    "country": "Asia",
     "category": "Documentary",
     "file": "logos/tlc.png",
     "external_url": null
