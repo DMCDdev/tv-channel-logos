@@ -83,7 +83,7 @@ Add an entry to `channels.json`:
 
 | Logo | Channel Name | tvg-id | Category | Country | Storage Type | Direct Link |
 | :---: | :--- | :---: | :--- | :---: | :---: | :--- |
-| — | **Sample Channel One** | <code>Sample1.tv</code> | General | US | `Missing` | — |
+| — | **A2Z** | <code>A2Z.ph</code> | Entertainment | PH | `Missing` | — |
 | <img src="https://example.com/logos/sample-news.png" alt="Sample News Network" height="32" style="max-height:32px; vertical-align:middle;"/> | **Sample News Network** | <code>SampleNews.tv</code> | News | US | `Attached Link` | [Direct Link](https://example.com/logos/sample-news.png) |
 
 ---
