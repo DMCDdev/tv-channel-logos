@@ -1,12 +1,12 @@
 [
   {
-    "id": "sample-channel-1",
-    "name": "Sample Channel One",
-    "aliases": ["Sample 1", "Sample TV 1"],
-    "tvg_id": "Sample1.tv",
-    "country": "US",
-    "category": "General",
-    "file": "logos/sample-channel-1.png",
+    "id": "a2z",
+    "name": "A2Z",
+    "aliases": ["A2Z"],
+    "tvg_id": "A2Z.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "https://github.com/DMCDdev/tv-channel-logos/blob/main/logos/a2z.png",
     "external_url": null
   },
   {
