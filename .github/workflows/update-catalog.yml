@@ -24,9 +24,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Catalog Generator
+      - name: Run Catalog Generator & Purge CDN
         run: |
-          python scripts/update_catalog.py
+          python scripts/update_catalog.py --purge
 
       - name: Commit and Push Changes
         run: |

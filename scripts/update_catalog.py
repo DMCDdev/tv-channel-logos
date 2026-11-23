@@ -213,6 +213,7 @@ def main():
         # Determine primary resolved URL
         primary_url = ""
         storage_type = "None"
+        preview_src = ""
         if local_exists and resolved_file:
             # Encode spaces and special chars for valid Web URL
             encoded_path = urllib.parse.quote(resolved_file)
@@ -220,15 +221,19 @@ def main():
             raw_url = f"{RAW_BASE}{encoded_path}"
             storage_type = "Stored (Repo)"
             stored_count += 1
+            # Use repository relative path for GitHub README so newly pushed images render immediately without CDN caching delay
+            preview_src = encoded_path
         elif ext_url:
             primary_url = ext_url
             raw_url = ext_url
             storage_type = "Attached Link"
             external_count += 1
+            preview_src = ext_url
         else:
             primary_url = ""
             raw_url = ""
             storage_type = "Missing"
+            preview_src = ""
 
         # Populate quick lookup map
         if primary_url:
@@ -251,7 +256,7 @@ def main():
                 lookup_map[k_str.replace(" ", "_")] = primary_url
 
         # Build table row
-        preview_img = f'<img src="{primary_url}" alt="{name}" height="32" style="max-height:32px; vertical-align:middle;"/>' if primary_url else "—"
+        preview_img = f'<img src="{preview_src}" alt="{name}" height="32" style="max-height:32px; vertical-align:middle;"/>' if preview_src else "—"
         tvg_display = f"<code>{tvg_id}</code>" if tvg_id else "—"
         type_badge = f"`{storage_type}`"
         link_display = f"[Direct Link]({primary_url})" if primary_url else "—"
@@ -367,6 +372,25 @@ This repository includes a GitHub Actions workflow (`.github/workflows/update-ca
         f.write(readme_text)
 
     print(f"Catalog updated successfully! Stored: {stored_count}, External: {external_count}")
+
+    if "--purge" in sys.argv:
+        purge_jsdelivr_cache([c.get("file") for c in channels if c.get("file")])
+
+def purge_jsdelivr_cache(file_paths):
+    """Purge jsDelivr cache for given relative file paths so updates appear immediately."""
+    clean_paths = [p for p in file_paths if p]
+    print(f"Purging jsDelivr CDN cache for {len(clean_paths)} files...")
+    for fpath in clean_paths:
+        encoded = urllib.parse.quote(fpath.replace("\\", "/"))
+        url = f"https://purge.jsdelivr.net/gh/{REPO_OWNER}/{REPO_NAME}@{BRANCH}/{encoded}"
+        req = urllib.request.Request(url, headers={"User-Agent": "TVChannelLogosBot/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                pass
+        except Exception:
+            pass
+        time.sleep(0.05)
+    print("jsDelivr CDN cache purged successfully.")
 
 if __name__ == "__main__":
     main()
