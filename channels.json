@@ -609,5 +609,31 @@
     "category": "Movies",
     "file": "logos/vivacinema.png",
     "external_url": null
+  },
+  {
+    "id": "tap-edge",
+    "name": "Tap Edge",
+    "aliases": [
+      "Tap Edge",
+      "tap edge"
+    ],
+    "tvg_id": "tapedge.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/tap edge.png",
+    "external_url": null
+  },
+  {
+    "id": "tmc",
+    "name": "Tmc",
+    "aliases": [
+      "Tmc",
+      "tmc"
+    ],
+    "tvg_id": "tmc.ph",
+    "country": "PH",
+    "category": "Entertainment",
+    "file": "logos/tmc.png",
+    "external_url": null
   }
 ]
