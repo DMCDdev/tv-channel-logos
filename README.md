@@ -1,8 +1,8 @@
 # TV Channel Logos
 
-[![Total Channels](https://img.shields.io/badge/Channels-2-blue.svg)](#)
-[![Stored Logos](https://img.shields.io/badge/Stored_Files-0-green.svg)](#)
-[![Attached Links](https://img.shields.io/badge/Attached_Links-1-orange.svg)](#)
+[![Total Channels](https://img.shields.io/badge/Channels-3-blue.svg)](#)
+[![Stored Logos](https://img.shields.io/badge/Stored_Files-1-green.svg)](#)
+[![Attached Links](https://img.shields.io/badge/Attached_Links-0-orange.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A unified repository for TV channel logos designed for **[DreamTuner TV](https://github.com/DMCDdev/DreamTunerTV)**, IPTV players, M3U playlists, and XMLTV EPG guides.
@@ -83,8 +83,9 @@ Add an entry to `channels.json`:
 
 | Logo | Channel Name | tvg-id | Category | Country | Storage Type | Direct Link |
 | :---: | :--- | :---: | :--- | :---: | :---: | :--- |
-| — | **A2Z** | <code>A2Z.ph</code> | Entertainment | PH | `Missing` | — |
-| <img src="https://example.com/logos/sample-news.png" alt="Sample News Network" height="32" style="max-height:32px; vertical-align:middle;"/> | **Sample News Network** | <code>SampleNews.tv</code> | News | US | `Attached Link` | [Direct Link](https://example.com/logos/sample-news.png) |
+| <img src="https://cdn.jsdelivr.net/gh/DMCDdev/tv-channel-logos@main/logos/a2z.png" alt="A2Z" height="32" style="max-height:32px; vertical-align:middle;"/> | **A2Z** | <code>A2Z.ph</code> | Entertainment | PH | `Stored (Repo)` | [Direct Link](https://cdn.jsdelivr.net/gh/DMCDdev/tv-channel-logos@main/logos/a2z.png) |
+| — | **ALLTV2** | <code>ALLTV2.ph</code> | Entertainment | PH | `Missing` | — |
+| — | **Kapamilya Channel HD** | <code>KapamilyaChannelHD.ph</code> | Entertainment | PH | `Missing` | — |
 
 ---
 
